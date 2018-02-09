@@ -1,0 +1,6 @@
+<header class="pagination-centered" *ngIf="sessionService.getUser() != null"> 
+  <app-login></app-login>
+</header>
+<header class="pagination-centered" *ngIf="sessionService.getUser() == null">
+  <app-login></app-login>
+</header>  

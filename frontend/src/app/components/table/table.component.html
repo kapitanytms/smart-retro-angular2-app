@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-md-12 table-heading">
+      <h6 class="text-center text-nowrap text-undld"><ins>{{title}}</ins></h6>       
+    </div>
+  </div>
+  <div class="row">
+      <input #newCardDesc type="text" class="form-control">
+  </div>  
+  <div class=row>
+    <button type="button" class="btn btn-primary btn-block" (click)="addNewCard(newCardDesc.value); newCardDesc.value = ''">+</button>      
+  </div>
+      <div *ngIf="id == 1" class="row">
+          <app-card *ngFor="let card of cards" 
+                    class="col-md-6 card col-sm-6 blueCard"
+                    [card]="card" 
+                    (cardRemoving)="removeCard($event)"></app-card>      
+        </div>
+        <div *ngIf="id == 2" class="row">
+          <app-card *ngFor="let card of cards" 
+                    class="col-md-6 card col-sm-6 orangeCard" 
+                    [card]="card" 
+                    (cardRemoving)="removeCard($event)"></app-card>      
+        </div>
+        <div *ngIf="id == 3" class="row">
+          <app-card *ngFor="let card of cards" 
+                    class="col-md-6 card col-sm-6 redCard" 
+                    [card]="card" 
+                    (cardRemoving)="removeCard($event)"></app-card>      
+        </div>
+</div>
+

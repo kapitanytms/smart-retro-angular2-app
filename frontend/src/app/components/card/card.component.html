@@ -1,0 +1,19 @@
+<p *ngIf="!editText" (click)="editText = !editText">{{card.description}}</p>
+<textarea id="textInput" rows="5" *ngIf="editText" [(ngModel)]="card.description" (blur)="editText = !editText"></textarea>
+<div class="buttons">
+    <button type="button" class="btn btn-circle" (click)="increaceRate()" id="rateBtn">{{card.rate}}</button>
+    
+    <button type="button" class="btn btn-circle" id="removeBtn" (click)="removeCard()">X</button>
+</div>                   
+
+
+
+         
+      
+            
+            
+            
+                     
+                    
+    
+

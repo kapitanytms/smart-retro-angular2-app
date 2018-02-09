@@ -1,0 +1,37 @@
+@media screen and (max-width: 480px) {
+    i {
+      font-size: 18px;
+    }
+  }
+  
+  
+  @media screen and (min-width: 481px) and (max-width: 1200px){
+    i {
+      font-size: 18px;
+    }
+  }
+  
+  
+  @media screen and (min-width: 1201px) and (max-width: 1920px){
+    i {
+      font-size: 26px;
+    }
+  }
+  :host{
+    height: 200px;    
+  }
+  header{
+    padding: 40px 0;
+    text-align: center;
+    background-image: url("../../../assets/retrospective.jpg");
+    border-bottom: 1px solid #ccc;
+    box-shadow: 1px 2px 17px 0px rgba(0,0,0,0.25);
+  }
+  i:hover, i > a:hover{
+    color: #1d9d74;
+    border-color: #1d9d74;
+  
+  }
+
+  
+  

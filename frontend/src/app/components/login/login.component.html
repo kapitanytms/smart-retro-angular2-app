@@ -1,0 +1,32 @@
+<div *ngIf="!sessionService.isLoggedIn()" class="container">
+  <div class="row no-gutters justify-content-center">
+    <div class="col-8 col-sm-6 col-md-4">
+          <form (ngSubmit)="login(loginForm)" #loginForm="ngForm" class="form-vertical">
+            <input class="form-control " type="text" placeholder="Felhasznalonev" id="username" name="username" required minlength="4" ngModel/>
+            <input class="form-control " type="password" placeholder="Jelszo" id="password" name="password" required minlength="8" ngModel/>
+            <button class="btn btn-primary btn-block " type="submit">Bejelenkezés</button>
+            <ng-container *ngIf="existUser == false">
+              <div class="alert alert-warning">
+                  {{errorMessage}}
+              </div>
+            </ng-container>
+          </form>  
+    </div>
+  </div>
+</div>
+
+<div *ngIf="sessionService.isLoggedIn()">
+  <span class="uname">
+      Hello {{user.username}}!
+  </span>
+  <button class="btn btn-success" (click)="print()"> 
+    <i class="fa fa-print" aria-hidden="true"></i>  
+  </button> 
+  <button class="btn btn-success" (click)="logout()"> 
+    <i class="fa fa-sign-out" aria-hidden="true"></i>  
+  </button> 
+ 
+
+  </div>
+
+
